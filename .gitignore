@@ -1,0 +1,4 @@
+*.pyc
+iamshakti/secrets.py
+db.sqlite3
+uwsgi.ini
