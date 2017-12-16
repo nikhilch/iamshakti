@@ -1,10 +1,10 @@
-from django.conf.urls import url, patterns
+from django.conf.urls import *
 from . import views
 
-#urlpatterns = [
-#    path('', views.index, name='index'),
-#]
+urlpatterns = [
+    url('', views.index, name='index'),
+]
 
-urlpatterns = patterns('',
-    url('', views.index, name='index')
-);
+#urlpatterns = patterns('',
+#    url('', views.index, name='index')
+#);
