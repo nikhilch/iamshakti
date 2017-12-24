@@ -6,9 +6,16 @@
 
 <body>
     <header>
-        This is the header.
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'initiatives' %}">Initiatives</a>
+            <a href="{% url 'stories' %}">Stories</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'more' %}">More</a>
     </header>
         This is in between the header and the footer.
+        Ayyy here's the content:
+        {% block content %}{% endblock %}
     <footer>
         This is the footer.
     </footer>
