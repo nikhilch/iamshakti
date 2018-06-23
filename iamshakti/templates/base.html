@@ -1,27 +1,49 @@
 <html>
 <head>
+    {% load static %}
     <title>This is the title</title>
+    <link rel="stylesheet" type="text/css" href="{% static "iamshakti/css/fonts/FuturaPT.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "iamshakti/css/base.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static "iamshakti/js/base.js" %}"></script>
+    <script src="{% static "iamshakti/js/home.js" %}"></script>
 </head>
 
 <body>
-    {% load static %}
-    <div class="container-fluid text-center">
+    <div id="nav">
+        <img src="{% static "iamshakti/img/logo-white.png" %}" onclick="toTop();">
+        <div id="hotlines">
+            <ul>
+                <li>National Suicide Prevention: 1-800-273-8255</li>
+                <li>SAMHSA National Helpline: 1-800-662-4357</li>
+                <li>Desi LGBTQ Hotline: <a href="www.deqh.org">www.deqh.org</a></li>
+            </ul>
+        </div>
+
+        <div id="menu">
             <a href="{% url 'index' %}">Home</a>
             <a href="{% url 'about' %}">About</a>
             <a href="{% url 'initiatives' %}">Initiatives</a>
             <a href="{% url 'stories' %}">Stories</a>
             <a href="{% url 'contact' %}">Contact Us</a>
             <a href="{% url 'more' %}">More</a>
+        </div>
     </div>
-    <!--<img src="{% static "images/logo.png" %}" onerror=alert("error") />-->
-        This is in between the header and the footer.
-        Ayyy here's the content:
+
+    <div id="content">
         {% block content %}{% endblock %}
-    <footer>
-        This is the footer.
-    </footer>
+    </div>
+
+    <div id="footer">
+        <a href="#" class="no-underline fa fa-facebook"></a>
+        <a href="#" class="no-underline fa fa-twitter"></a>
+        <a href="#" class="no-underline fa fa-youtube"></a>
+        <a href="#" class="no-underline fa fa-pinterest"></a>
+        <a href="#" class="no-underline fa fa-instagram"></a>
+        <div class="footer-email"><script type="text/javascript" src="{% static "iamshakti/js/core-email-enkoder.js" %}"></script></div>
+    </div>
 </body>
 </html>
