@@ -32,15 +32,22 @@ def stories(request):
     }
     return HttpResponse(template.render(context, request))
 
-def contact(request):
-    template = loader.get_template('contact.html')
+def resources(request):
+    template = loader.get_template('resources.html')
     context = {
         None : None,
     }
     return HttpResponse(template.render(context, request))
 
-def more(request):
-    template = loader.get_template('more.html')
+def jointhemovement(request):
+    template = loader.get_template('jointhemovement.html')
+    context = {
+        None : None,
+    }
+    return HttpResponse(template.render(context, request))
+
+def donate(request):
+    template = loader.get_template('donate.html')
     context = {
         None : None,
     }

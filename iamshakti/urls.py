@@ -7,6 +7,7 @@ urlpatterns = [
     url(r'^about/$', views.about, name='about'),
     url(r'^initiatives/$', views.initiatives, name='initiatives'),
     url(r'^stories/$', views.stories, name='stories'),
-    url(r'^contact/$', views.contact, name='contact'),
-    url(r'^more/$', views.more, name='more'),
+    url(r'^resources/$', views.resources, name='resources'),
+    url(r'^jointhemovement/$', views.jointhemovement, name='jointhemovement'),
+    url(r'^donate/$', views.donate, name='donate'),
 ]
