@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from django.http import Http404
 from django.template import loader
+from .models import Story
 
 
 def index(request):
@@ -25,12 +27,15 @@ def initiatives(request):
     }
     return HttpResponse(template.render(context, request))
 
-def stories(request):
-    template = loader.get_template('stories.html')
-    context = {
-        None : None,
-    }
-    return HttpResponse(template.render(context, request))
+def all_stories(request):
+    latest_stories = Story.objects.order_by('-postdate')
+    context = { 'latest_stories' : latest_stories }
+    return render(request, 'stories.html', context)
+
+def story_detail(request, storyid):
+    story = get_object_or_404(Story, pk=storyid)
+    context = { 'story' : story }
+    return render(request, 'story_detail.html', context)
 
 def resources(request):
     template = loader.get_template('resources.html')
