@@ -16,5 +16,6 @@ class Story(models.Model):
         return self.title
 
     class Meta:
-        managed = False
         db_table = 'stories'
+        verbose_name_plural = 'stories'
+        ordering = ['-postdate']

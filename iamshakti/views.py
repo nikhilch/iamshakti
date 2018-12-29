@@ -28,7 +28,7 @@ def initiatives(request):
     return HttpResponse(template.render(context, request))
 
 def all_stories(request):
-    latest_stories = Story.objects.order_by('-postdate')
+    latest_stories = Story.objects.all()
     context = { 'latest_stories' : latest_stories }
     return render(request, 'stories.html', context)
 
