@@ -8,7 +8,7 @@ class Story(models.Model):
     postdate = models.DateField()
     cwarning = models.CharField(max_length=300, blank=True, null=True)
     tags = models.CharField(max_length=200, blank=True, null=True)
-    text = models.CharField(max_length=8000, blank=True, null=True)
+    text = models.TextField(blank=True, null=True)
     mediaurl = models.CharField(max_length=2000, blank=True, null=True)
     storyid = models.AutoField(primary_key=True)
 
