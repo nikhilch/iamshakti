@@ -6,7 +6,7 @@
     <h3>{{ story.author }} | {{ story.postdate }}</h3>
     <h5>Content Warning: This story discusses topics such as {{ story.cwarning }}</h5>
 
-    <p>{{ story.text }}</p>
+    <p>{{ story.text | linebreaks}}</p>
 
     <a href="{% url "all_stories" %}">Back to Stories</a>
 {% endblock %}

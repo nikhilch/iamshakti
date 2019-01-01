@@ -6,7 +6,7 @@ Ayy this is stories
     {% if latest_stories %}
         <ul>
             {% for story in latest_stories %}
-                <li><a href="{{ story.get_absolute_path}}">{{story.title}}</a> | {{story.author}} | {{story.postdate}}</li>
+                <li><a href="{{ story.get_absolute_path}}">{{story.title}}</a> | {{story.author}} | {{story.postdate}} | <i>{{story.text | truncatewords:20}}</i> </li>
             {% endfor %}
         </ul>
     {% else %}
