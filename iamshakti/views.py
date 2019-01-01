@@ -32,8 +32,8 @@ def all_stories(request):
     context = { 'latest_stories' : latest_stories }
     return render(request, 'stories.html', context)
 
-def story_detail(request, storyid):
-    story = get_object_or_404(Story, pk=storyid)
+def story_detail(request, year, month, day, slug):
+    story = get_object_or_404(Story, slug=slug, postdate__year=year, postdate__month=month, postdate__day=day)
     context = { 'story' : story }
     return render(request, 'story_detail.html', context)
 
