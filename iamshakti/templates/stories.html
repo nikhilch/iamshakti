@@ -2,4 +2,13 @@
 
 {% block content %}
 Ayy this is stories
+
+    <ul>
+        {% for story in latest_stories %}
+                <li><a href="{{ story.get_absolute_path}}">{{story.title}}</a> | {{story.author}} | {{story.postdate}} | <i>{{story.text | truncatewords:20}}</i> </li>
+        {% empty %}
+            <p>No stories to show :(</p>
+        {% endfor %}
+    </ul>
+
 {% endblock %}

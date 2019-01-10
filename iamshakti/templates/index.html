@@ -3,79 +3,13 @@
 
 {% block content %}
 
-<div id="quotes">
-    <div id="rarrow"><img src="{% static "iamshakti/img/right-arrow.png" %}"></div>
-    <div id="larrow"><img src="{% static "iamshakti/img/left-arrow.png" %}"></div>
-    <div id="quote-footer">
-        <ul>
-        </ul>
-         <a href="#" class="no-underline">View More Stories</a>
-    </div>
-    <!-- This is dynamic, add or remove things and the page should respond -->
-    <!-- Template:
-    <div class="quote-container">
-        <div class="quote">
-            <p>[QUOTE PARAGRAPH]</p>
-            <p>[QUOTE PARAGRAPH]...</p>
-        </div>
-        <img src="[IMAGE SOURCE HERE]">
-    </div>
+<div class="jumbotron">
+        <div class="container">
+        <img src="{% static "iamshakti/img/archie.png" %}" />
+          <h1 class="display-3">I AM</h1>
             
-    -->
-    <!-- Odd numbered paragraphs will be left aligned, even numbered will be right aligned -->
-    <script src="{% static "iamshakti/js/slider.js" %}"></script>
-    <div class="quote-container">
-        <div class="quote">
-            <p>&quot;If just one voice can shake empires and inspire millions, imagine what all our voices can engineer together.</p>
-            <p>So, let us send shockwaves through this universe, and become, at this very second, indomitable.&quot;</p>
+          <p>yo</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
         </div>
-        <img src="{% static "iamshakti/img/sample1.jpg" %}">
-    </div>
-    <div class="quote-container">
-        <div class="quote">
-            <p>&quot;We must realize the incomparable power of a beautiful mind and its self-worth – no matter the physicality that cloaks it.&quot;</p>
-        </div>
-        <img src="{% static "iamshakti/img/sample2.jpg" %}">
-    </div>
-    <div class="quote-container">
-        <div class="quote">
-            <p>&quot;This movement means the start of a very needed conversation in the South Asian community, in which mental illness is truly an illness; it's not some kind of choice, and it's not some kind of mistake.&quot;</p>
-        </div>
-        <img src="{% static "iamshakti/img/sample3.jpg" %}">
-    </div>
-</div>
-<div id="about">
-    <div><img src="{% static "iamshakti/img/full.png" %}"></div>
-    <div>
-        <h1><span>About</span> I-AM Shakti</h1>
-        <hr>
-        <p>I-AM SHAKTI (translation: &quot;INDIAN-AMERICAN POWER&quot; or &quot;I AM POWER&quot;) is a social justice movement to sensitize Indian-Americans to mental health challenges while providing hope and support to those affected. Our symbol is the phoenix, symbolizing power and revival.</p>
-        <p>Though it started with an Indian focus, we stand as allies in strong solidarity with all South Asians and marginalized communities and welcome all who wish to get involved.</p>
-        <a href="#" class="no-underline">Our Initiatives</a>
-    </div>
-</div>
-<div id="why">
-    <img src="{% static "iamshakti/img/sample4.jpg" %}">
-    <h1>Why</h1>
-    <hr>
-    <div>
-        <p><span>Over 60 million people in India suffer from mental illnesses.</span></p>
-        <p>South India has the world’s highest suicide rate for female teens. <br>India alone accounts for &gt;30% of global suicides. Yet, more than 80% of Indians never seek care - offered by less than three psychiatrists per million people. And this is under-reported. In America, the suicide rate among South Asian women is higher than that of the US population, while use of mental health care is among the lowest.</p>
-        <p>In our society, it is sometimes such that the judgements of a few dictate the actions of a many. We will not allow this. For every 100,000 who stigmatize, 1 million will support.</p>
-    </div>
-</div>
-<div id="contact">
-    <h1>Contact Us</h1>
-    <p>We welcome any feedback, questions, and/or media inquiries in the form below.</p>
-    <p>If you would like to get more involved with I-AM SHAKTI,<br>visit the <a href="#">Get Involved</a> page!</p>
-    <form action="" method="POST">
-        <input type="text" id="name" name="name" placeholder="Name">
-        <input type="email" id="email" name="email" placeholder="Email">
-        <input type="text" id="subject" name="subject" placeholder="Subject">
-        <textarea name="message" id="message" placeholder="Message"></textarea>
-        <input type="submit" value="Send">
-    </form>
-</div>
-
-
+      </div>
 {% endblock %}
