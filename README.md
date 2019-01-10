@@ -17,7 +17,7 @@ Starting with your favorite bash terminal, run the following commands:
 1. Create a virtual environment: `virtualenv shakti-venv`
 1. Get virtual: `source shakti-venv/bin/activate`
 1. Install dependencies: `pip3 install -r requirements.txt`
-1. Get the secret file from Nikhil
+1. Get the yummy secret file from Nikhil
 
 
 ### The Juicy Stuff
