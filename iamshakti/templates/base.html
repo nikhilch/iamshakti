@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     {% load static %}
+    {% load iamshakti_tags %}
     <title>i-amshakti</title>
 
     <meta charset="utf-8">
@@ -25,13 +26,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="{% url 'index' %}">Home</a>
-                <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
-                <a class="nav-item nav-link" href="{% url 'initiatives' %}">Initiatives</a>
-                <a class="nav-item nav-link" href="{% url 'all_stories' %}">Stories</a>
-                <a class="nav-item nav-link" href="{% url 'resources' %}">Resources</a>
-                <a class="nav-item nav-link" href="{% url 'jointhemovement' %}">Join the Movement</a>
-                <a class="nav-item nav-link" href="{% url 'donate' %}">Donate</a>
+                <a class="nav-item nav-link {% active 'index' %}" href="{% url 'index' %}">Home</a>
+                <a class="nav-item nav-link {% active 'about' %}" href="{% url 'about' %}">About</a>
+                <a class="nav-item nav-link {% active 'initiatives' %}" href="{% url 'initiatives' %}">Initiatives</a>
+                <a class="nav-item nav-link {% active 'all_stories' %}" href="{% url 'all_stories' %}">Stories</a>
+                <a class="nav-item nav-link {% active 'resources' %}" href="{% url 'resources' %}">Resources</a>
+                <a class="nav-item nav-link {% active 'jointhemovement' %}" href="{% url 'jointhemovement' %}">Join the Movement</a>
+                <a class="nav-item nav-link {% active 'donate' %}" href="{% url 'donate' %}">Donate</a>
             </div>
         </div>
     </nav>
