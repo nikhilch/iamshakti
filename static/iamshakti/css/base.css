@@ -1,13 +1,3 @@
-#navbar {
-    background-color: #aaaaaa;
-}
-
-#menu {
-    margin-left: 40px;
-}
-
-
-#menu a {
-    color: white;
-    margin: 10px 40;
+#navbar-logo-image {
+    max-width: 40px;
 }
