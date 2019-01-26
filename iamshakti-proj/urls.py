@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
+from django_otp.admin import OTPAdminSite
+
+if settings.PRODUCTION_ENV:
+    admin.site.__class__ = OTPAdminSite
 
 urlpatterns = [
     url('', include('iamshakti.urls')),
