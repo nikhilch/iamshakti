@@ -1,5 +1,149 @@
 {% extends 'base.html' %}
 
 {% block content %}
-Ayy this is resources
+<div class="jumbotron text-center">
+    <h1>Resources</h1>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Call to Action&raquo;</a></p>
+</div>
+
+<div class="container">
+    <h3>Providers</h3>
+    <p>Use the search tool below to find a provider near you!</p>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Enter Location" aria-label="Location" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6" style="height: 400px; background-color: #777777">Map goes here</div>
+        <div class="col-sm-6">
+            <div id="accordion-providers">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseP1">State 1</a>
+                    </div>
+                    <div id="collapseP1" class="collapse show" data-parent="#accordion-providers">
+                        <div class="card-body">
+                            <address>
+                                <strong>Provider 1</strong>
+                                <br>
+                                123 Address St.
+                                <br>
+                                Chicago, IL 12345
+                                <br>
+                                <br>
+                                <a href="#">first.last@example.com</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseP2">State 2</a>
+                    </div>
+                    <div id="collapseP2" class="collapse" data-parent="#accordion-providers">
+                        <div class="card-body">
+                            <address>
+                                <strong>Provider 2</strong>
+                                <br>
+                                123 Address St.
+                                <br>
+                                Chicago, IL 12345
+                                <br>
+                                <br>
+                                <a href="#">first.last@example.com</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseP3">State 3</a>
+                    </div>
+                    <div id="collapseP3" class="collapse" data-parent="#accordion-providers">
+                        <div class="card-body">
+                            <address>
+                                <strong>Provider 3</strong>
+                                <br>
+                                123 Address St.
+                                <br>
+                                Chicago, IL 12345
+                                <br>
+                                <br>
+                                <a href="#">first.last@example.com</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="jumbotron">
+    <div class="container">
+        <h3>Networks</h3>
+            <div id="accordion-networks">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseN1">State 1</a>
+                    </div>
+                    <div id="collapseN1" class="collapse show" data-parent="#accordion-networks">
+                        <div class="card-body">
+                            <address>
+                                <strong>Network 1</strong>
+                                <br>
+                                Firstname Lastname
+                                <br>
+                                <a href="#">first.last@example.com</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseN2">State 2</a>
+                    </div>
+                    <div id="collapseN2" class="collapse" data-parent="#accordion-networks">
+                        <div class="card-body">
+                            <address>
+                                <strong>Network 2</strong>
+                                <br>
+                                Firstname Lastname
+                                <br>
+                                <a href="#">first.last@example.com</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseN3">State 3</a>
+                    </div>
+                    <div id="collapseN3" class="collapse" data-parent="#accordion-networks">
+                        <div class="card-body">
+                            <address>
+                                <strong>Network 3</strong>
+                                <br>
+                                Firstname Lastname
+                                <br>
+                                <a href="#">first.last@example.com</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+</div>
+
+
+
 {% endblock %}
