@@ -11,4 +11,6 @@ urlpatterns = [
     path('jointhemovement/', views.jointhemovement, name='jointhemovement'),
     path('donate/', views.donate, name='donate'),
 
+    path('api/jtm/', views.JTMUser_list),
+    path('api/jtm/<int:pk>', views.JTMUser_detail),
 ]

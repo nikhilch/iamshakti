@@ -27,3 +27,8 @@ class Story(models.Model):
         db_table = 'stories'
         verbose_name_plural = 'stories'
         ordering = ['-postdate']
+
+class JTMUser(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    text = models.TextField(blank=True, null=True)
