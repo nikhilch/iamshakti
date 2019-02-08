@@ -44,13 +44,31 @@
         {% block content %}{% endblock %}
     </div>
 
-    <footer class="footer">
+    <footer class="footer bg-dark text-light">
         <div class="container">
             <div class="row">
-                <a href="https://www.facebook.com/iamshaktiofficial" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
-                <a href="https://instagram.com/iamshaktiofficial" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/i_amshakti" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.youtube.com/channel/UCxHpzI3hE2q_MWq3Te_5d3w" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                <div class="col-sm-5 text-center py-4">
+                    <a class="navbar-brand" href="{% url 'index' %}">
+                        <img id="footer-logo-image" src="{% static "iamshakti/img/full.png" %}" alt="I AM Shakti">
+                    </a>
+                </div>
+                <div class="col-sm-3 py-4">
+                    <h5>Home</h5>
+                    <h5>About</h5>
+                    <h5>Initiatives</h5>
+                    <h5>Stories</h5>
+                    <h5>Resources</h5>
+                </div>
+                <div class="col-sm-4 py-4">
+                    <h5><strong>Join Us</strong></h5>
+                    <h5>Email</h5>
+                    <div class="text-left">
+                    <a href="https://www.facebook.com/iamshaktiofficial" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/iamshaktiofficial" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/i_amshakti" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCxHpzI3hE2q_MWq3Te_5d3w" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
             </div> 
         </div> 
     </footer>
