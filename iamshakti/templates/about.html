@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -33,14 +34,15 @@
                 <p>of South Asians never seek care</p>
             </div>
         </div>
-        <div class="row">
-            <div class="input-group mb-3 col">
-                <input type="text" class="form-control" placeholder="Share your story on Twitter" aria-label="Share your story on Twitter" aria-describedby="basic-addon2">
+        <div class="row justify-content-md-center">
+            <div class="input-group mb-3 col-sm-9">
+                <script src="{% static "iamshakti/js/tweet_button.js"%}"></script>
+                <input id="tweetText" type="text" class="form-control" placeholder="Share your story on Twitter..." aria-label="Share your story on Twitter..." aria-describedby="basic-addon2" maxlength="139" autocomplete="off" oninput="fillTweet()">
                 <div class="input-group-append">
                     <span class="bg-white input-group-text" id="basic-addon2">#IAMSHAKTI</span>
-                    <a class="btn btn-info" href="#" role="button">Tweet &raquo;</a>
+                    <a id="tweetButton" class="btn btn-info" href="https://twitter.com/intent/tweet?button_hashtag=IAMSHAKTI" role="button" target="_blank" rel="noopener">Tweet &raquo;</a>
                 </div>
-            </div>    
+            </div>
         </div>    
     </div>
 </div>
