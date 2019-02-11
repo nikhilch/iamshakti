@@ -4,10 +4,16 @@
 {% block content %}
 
 <div class="jumbotron">
-    <div class="container">
-        <img class="img-fluid" src="{% static "iamshakti/img/full.png" %}">
-        <h1 class="display-3">I AM</h1>
-        <p>yo</p>
+    <div class="container text-center">
+        <img class="img-fluid mx-auto" src="{% static "iamshakti/img/full.png" %}">
+        <div class="row my-5">
+            <div class="col-sm-3"> 
+                <h1 class="display-3">I AM</h1>
+            </div>
+            <div class="col-sm-9"> 
+                <img class="img-fluid" src="{% static "iamshakti/img/shakti-black.png" %}">
+            </div>
+        </div>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
     </div>
 </div>
