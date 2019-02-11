@@ -93,11 +93,3 @@ def JTMUser_detail(request, pk):
     elif request.method == 'DELETE':
         user.delete()
         return HttpResponse(status=204)
-
-
-def donate(request):
-    template = loader.get_template('donate.html')
-    context = {
-        None : None,
-    }
-    return HttpResponse(template.render(context, request))

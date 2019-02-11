@@ -9,7 +9,6 @@ urlpatterns = [
     path('stories/<int:year>/<int:month>/<int:day>/<slug:slug>/', views.story_detail, name='story_detail'),
     path('resources/', views.resources, name='resources'),
     path('jointhemovement/', views.jointhemovement, name='jointhemovement'),
-    path('donate/', views.donate, name='donate'),
 
     path('api/jtm/', views.JTMUser_list),
     path('api/jtm/<int:pk>', views.JTMUser_detail),
