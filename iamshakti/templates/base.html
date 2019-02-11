@@ -27,13 +27,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse text-right" id="navbarNav">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link {% active 'index' %}" href="{% url 'index' %}">Home</a>
-                    <a class="nav-item nav-link {% active 'about' %}" href="{% url 'about' %}">About</a>
-                    <a class="nav-item nav-link {% active 'initiatives' %}" href="{% url 'initiatives' %}">Initiatives</a>
-                    <a class="nav-item nav-link {% active 'all_stories' %}" href="{% url 'all_stories' %}">Stories</a>
-                    <a class="nav-item nav-link {% active 'resources' %}" href="{% url 'resources' %}">Resources</a>
-                    <a class="nav-item nav-link {% active 'jointhemovement' %}" href="{% url 'jointhemovement' %}">Join the Movement</a>
+                <div class="container justify-content-end navbar-nav">
+                    <a class="nav-item nav-link mx-3 {% active 'index' %}" href="{% url 'index' %}">Home</a>
+                    <a class="nav-item nav-link mx-3 {% active 'about' %}" href="{% url 'about' %}">About</a>
+                    <a class="nav-item nav-link mx-3 {% active 'initiatives' %}" href="{% url 'initiatives' %}">Initiatives</a>
+                    <a class="nav-item nav-link mx-3 {% active 'all_stories' %}" href="{% url 'all_stories' %}">Stories</a>
+                    <a class="nav-item nav-link mx-3 {% active 'resources' %}" href="{% url 'resources' %}">Resources</a>
+                    <a class="nav-item nav-link mx-3 btn btn-primary {% active 'jointhemovement' %}" id="jointhemovement-btn" href="{% url 'jointhemovement' %}">Join Us</a>
                 </div>
             </div>
         </nav>

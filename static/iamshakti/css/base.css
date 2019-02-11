@@ -6,6 +6,22 @@ body {
     max-width: 40px;
 }
 
+.nav-link {
+   font-size: 20px; 
+}
+
+.active {
+    font-weight: bold;
+
+}
+
+#jointhemovement-btn {
+    color: white;    
+    padding: 6px 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+
 #footer-logo-image {
     max-height: 150px;
 }
@@ -18,3 +34,4 @@ body {
     text-decoration: none;
     color: white;
 }
+
