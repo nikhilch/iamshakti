@@ -26,12 +26,20 @@ body {
     max-height: 150px;
 }
 
-.fab {
+.fab-footer {
     margin-top: 15px;
     font-size: 30px;
     width: 50px;
     text-align: left;
     text-decoration: none;
     color: white;
+}
+
+.fab-initiatives {
+    color: blue;
+    font-size: 30px;
+    width: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
