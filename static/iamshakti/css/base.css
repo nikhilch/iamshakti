@@ -43,3 +43,22 @@ body {
     margin-right: 5px;
 }
 
+
+
+@media screen and (min-width: 601px) {
+    .stories-list-text {
+        font-size: 40px;
+        text-indent: -3em;
+        margin-left: 3em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .stories-list-text {
+        font-size: 20px;
+    }
+}
+
+
+
+
