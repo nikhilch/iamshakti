@@ -2,11 +2,20 @@
 
 {% block content %}
 
+<div class="jumbotron text-center">
     <h1>{{ story.title }}</h1>
-    <h3>{{ story.author }} | {{ story.postdate }}</h3>
-    <h5>Content Warning: This story discusses topics such as {{ story.cwarning }}</h5>
+    <h5>{{ story.author }} | {{ story.postdate }}</h5>
+    <a class="btn btn-primary btn-lg" href="{% url 'all_stories' %}" role="button">Back to List</a>
+</div>
 
+<div class="container">
+    <h5 class="font-italic">Content Warning: This story discusses topics such as {{ story.cwarning }}</h5>
+    <br />
     <p>{{ story.text | linebreaks}}</p>
+    <br />
 
-    <a href="{% url "all_stories" %}">Back to Stories</a>
+    <div class="text-center my-3">
+        <a class="btn btn-primary btn-lg" href="{% url 'all_stories' %}" role="button">Back to Stories</a>
+    </div>
+</div>
 {% endblock %}
