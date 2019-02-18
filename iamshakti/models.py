@@ -29,6 +29,13 @@ class Story(models.Model):
         ordering = ['-postdate']
 
 class JTMUser(models.Model):
-    name = models.CharField(max_length=100)
+    firstName = models.CharField(max_length=50, blank=True, null=True)
+    lastName = models.CharField(max_length=50, blank=True, null=True)
     email = models.EmailField()
-    text = models.TextField(blank=True, null=True)
+    interests = models.TextField(blank=True, null=True)
+    joindate = models.DateField()
+
+    IAS_MEMBER = 'ME'
+    IAS_GEN_ALLY = 'GA'
+    MEMBER_TYPES = ( (IAS_MEMBER, 'Member'), (IAS_GEN_ALLY, 'General Ally'))
+    memberType = models.CharField(max_length=2, choices=MEMBER_TYPES, default=IAS_GEN_ALLY)
