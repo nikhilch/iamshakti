@@ -71,6 +71,8 @@ def JTMUser_list(request):
             return JsonResponse(serializer.data, status=201)
         return JsonResponse(serializer.errors, status=400)
 
+    return HttpResponse(status=400)
+
 @csrf_exempt
 def JTMUser_detail(request, pk):
     try:
@@ -93,3 +95,5 @@ def JTMUser_detail(request, pk):
     elif request.method == 'DELETE':
         user.delete()
         return HttpResponse(status=204)
+
+    return HttpResponse(status=400)

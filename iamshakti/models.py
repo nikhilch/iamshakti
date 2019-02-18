@@ -33,7 +33,7 @@ class JTMUser(models.Model):
     lastName = models.CharField(max_length=50, blank=True, null=True)
     email = models.EmailField()
     interests = models.TextField(blank=True, null=True)
-    joindate = models.DateField()
+    joindate = models.DateField(blank=True, null=True)
 
     IAS_MEMBER = 'ME'
     IAS_GEN_ALLY = 'GA'
