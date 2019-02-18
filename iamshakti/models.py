@@ -32,7 +32,7 @@ class JTMUser(models.Model):
     firstName = models.CharField(max_length=50, blank=True, null=True)
     lastName = models.CharField(max_length=50, blank=True, null=True)
     email = models.EmailField()
-    interests = models.TextField(blank=True, null=True)
+    interests = models.TextField(max_length=200, blank=True, null=True)
     joindate = models.DateField(blank=True, null=True)
 
     IAS_MEMBER = 'ME'

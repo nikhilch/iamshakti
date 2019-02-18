@@ -30,19 +30,19 @@
         <div class="col-sm-6">
             <div class="form-group">
                 <label for="firstName">First Name</label>
-                <input type="text" class="form-control" id="firstName">
+                <input maxlength="50" type="text" class="form-control" id="firstName">
             </div>
             <div class="form-group">
                 <label for="lastName">Last Name</label>
-                <input type="text" class="form-control" id="lastName">
+                <input maxlength="50" type="text" class="form-control" id="lastName">
             </div>
             <div class="form-group">
                 <label for="emailAddr1">Email</label>
-                <input type="email" class="form-control" id="emailAddr1">
+                <input maxlength="254" type="email" class="form-control" id="emailAddr1">
             </div>
             <div class="form-group">
                 <label for="interests">Interests</label>
-                <input type="text" class="form-control" id="interests">
+                <input maxlength="200" type="text" class="form-control" id="interests">
             </div>
             <button onclick="jtm_member()" type="submit" class="btn btn-primary">Submit</button>
         </div>
@@ -61,7 +61,7 @@
             <div class="col-sm-6">
                 <div class="form-group">
                     <label for="emailAddr2">Email</label>
-                    <input type="email" class="form-control" id="emailAddr2">
+                    <input maxlength="254" type="email" class="form-control" id="emailAddr2">
                 </div>
                 <button onclick="jtm_gen_ally()" type="submit" class="btn btn-primary">Submit</button>
             </div>
