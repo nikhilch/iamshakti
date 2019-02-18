@@ -39,3 +39,6 @@ class JTMUser(models.Model):
     IAS_GEN_ALLY = 'GA'
     MEMBER_TYPES = ( (IAS_MEMBER, 'Member'), (IAS_GEN_ALLY, 'General Ally'))
     memberType = models.CharField(max_length=2, choices=MEMBER_TYPES, default=IAS_GEN_ALLY)
+
+    class Meta:
+        ordering = ['-joindate']
