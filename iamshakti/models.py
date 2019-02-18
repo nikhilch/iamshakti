@@ -40,5 +40,11 @@ class JTMUser(models.Model):
     MEMBER_TYPES = ( (IAS_MEMBER, 'Member'), (IAS_GEN_ALLY, 'General Ally'))
     memberType = models.CharField(max_length=2, choices=MEMBER_TYPES, default=IAS_GEN_ALLY)
 
+    def __str__(self):
+        if self.firstName != None and self.lastName != None:
+            return self.firstName + ' ' + self.lastName
+        else:
+            return self.email
+
     class Meta:
         ordering = ['-joindate']
