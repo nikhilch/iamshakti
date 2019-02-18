@@ -10,6 +10,5 @@ urlpatterns = [
     path('resources/', views.resources, name='resources'),
     path('jointhemovement/', views.jointhemovement, name='jointhemovement'),
 
-    path('api/jtm/', views.JTMUser_list),
-    path('api/jtm/<int:pk>', views.JTMUser_detail),
+    path('api/jtm/', views.JTMUser_add),
 ]
