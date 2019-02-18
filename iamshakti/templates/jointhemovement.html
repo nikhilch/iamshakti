@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
+<script src="{% static "iamshakti/js/join_us_handler.js" %}"></script>
 
 <div class="jumbotron text-center">
     <h1>Welcome to I AM SHAKTI</h1>
@@ -26,25 +28,23 @@
             <p>Description of onboarding process &amp; some teams to join/things to do. View our initiatives page. Get more input here.</p>
         </div>
         <div class="col-sm-6">
-            <form>
-                <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" id="firstName">
-                </div>
-                <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control" id="lastName">
-                </div>
-                <div class="form-group">
-                    <label for="emailAddr1">Email</label>
-                    <input type="email" class="form-control" id="emailAddr1">
-                </div>
-                <div class="form-group">
-                    <label for="interests">Interests</label>
-                    <input type="text" class="form-control" id="interests">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName">
+            </div>
+            <div class="form-group">
+                <label for="emailAddr1">Email</label>
+                <input type="email" class="form-control" id="emailAddr1">
+            </div>
+            <div class="form-group">
+                <label for="interests">Interests</label>
+                <input type="text" class="form-control" id="interests">
+            </div>
+            <button onclick="jtm_member()" type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
 </div>
@@ -59,13 +59,11 @@
                 <p>Something here</p>
             </div>
             <div class="col-sm-6">
-                        <form>
-                    <div class="form-group">
-                        <label for="emailAddr2">Email</label>
-                        <input type="email" class="form-control" id="emailAddr2">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                <div class="form-group">
+                    <label for="emailAddr2">Email</label>
+                    <input type="email" class="form-control" id="emailAddr2">
+                </div>
+                <button onclick="jtm_gen_ally()" type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </div>
