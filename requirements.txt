@@ -1,4 +1,4 @@
-Django==2.2.6
+Django==2.2.9
 django-otp==0.5.1
 djangorestframework==3.10.2
 Markdown==3.0.1
