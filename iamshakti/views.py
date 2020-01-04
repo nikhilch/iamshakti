@@ -8,6 +8,7 @@ from rest_framework.parsers import JSONParser
 from .models import Story
 from .models import JTMUser
 from .serializers import JTMUserSerializer
+from datetime import date
 
 
 def index(request):
@@ -60,6 +61,7 @@ def jointhemovement(request):
 def JTMUser_add(request):
     if request.method == 'POST':
         data = JSONParser().parse(request)
+        data['joindate'] = date.today()
         serializer = JTMUserSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
