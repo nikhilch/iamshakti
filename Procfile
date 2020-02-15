@@ -1,1 +1,1 @@
-web: gunicorn iamshakti-proj.wsgi:application
+web: gunicorn iamshakti-proj.wsgi:application --log-file -
