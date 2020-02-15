@@ -1,1 +1,1 @@
-web: gunicorn iamshakti-proj.iamshakti.wsgi
+web: gunicorn iamshakti-proj.wsgi:application
