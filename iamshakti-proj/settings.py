@@ -85,9 +85,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ias_stories',
         'USER': '',
-        'PASSWORD': ''.
+        'PASSWORD': '',
         'HOST': '',
-        'PORT': ''.
+        'PORT': '',
     }
 }
 
