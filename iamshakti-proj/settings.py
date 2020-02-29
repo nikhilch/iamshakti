@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = (os.environ['DJANGO_DEBUG'] == 'True')
 
-ALLOWED_HOSTS = [u'localhost', u'127.0.0.1', u'0.0.0.0', u'wearesaath.herokuapp.com']
+ALLOWED_HOSTS = [u'localhost', u'127.0.0.1', u'wearesaath.herokuapp.com']
 
 
 # Application definition
@@ -83,11 +83,6 @@ WSGI_APPLICATION = 'iamshakti-proj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ias_stories',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
     }
 }
 
@@ -132,16 +127,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = os.environ['DJANGO_STATIC_URL']
 
-STATICFILES_DIRS = ( os.path.join(BASE_DIR, 'static/'), )
+STATICFILES_DIRS = ( os.path.join(BASE_DIR, os.environ['DJANGO_STATICFILES_DIRS']), )
 
 
 
 # Other secrets
 
-ADMIN_URL = r'^aaaaaaaa/'
-OTP_TOTP_ISSUER = 'I AM Shakti'
-PRODUCTION_ENV = True
+ADMIN_URL = os.environ['DJANGO_ADMIN_URL']
+OTP_TOTP_ISSUER = os.environ['DJANGO_TOTP_ISSUER']
+PRODUCTION_ENV = (os.environ['DJANGO_PRODUCTION_ENV'] == 1)
 
 django_heroku.settings(locals())
