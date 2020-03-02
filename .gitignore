@@ -3,4 +3,3 @@ iamshakti-proj/secrets.py
 db.sqlite3
 uwsgi.ini
 shakti-venv/*
-iamshakti/migrations/*
