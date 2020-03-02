@@ -137,6 +137,6 @@ STATICFILES_DIRS = ( os.path.join(BASE_DIR, os.environ['DJANGO_STATICFILES_DIRS'
 
 ADMIN_URL = os.environ['DJANGO_ADMIN_URL']
 OTP_TOTP_ISSUER = os.environ['DJANGO_TOTP_ISSUER']
-PRODUCTION_ENV = (os.environ['DJANGO_PRODUCTION_ENV'] == 1)
+PRODUCTION_ENV = (os.environ['DJANGO_PRODUCTION_ENV'] == 'True')
 
 django_heroku.settings(locals())
