@@ -11,7 +11,7 @@ function send_jtm(data) {
     xhr.onload = success;
     xhr.onerror = error;
 
-    xhr.open('POST', 'http://127.0.0.1:8000/api/jtm/');
+    xhr.open('POST', '/api/jtm/');
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
 
